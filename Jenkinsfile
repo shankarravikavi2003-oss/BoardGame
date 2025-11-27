@@ -15,5 +15,10 @@ pipeline {
                 echo 'GITHUB Webhook Configured'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
     }
 }
